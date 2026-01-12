@@ -1,8 +1,8 @@
 import pandas as pd 
 import pickle 
 from sklearn.linear_model import LogisticRegression 
-URL = "D:\\1_sem_4\\f_mlops\\docker_ci_cd\\data\\winequality-red.csv" 
-df = pd.read_csv(URL, sep=";") 
+DATA_PATH = "data/winequality-red.csv"
+df = pd.read_csv(DATA_PATH, sep=";")
 df["quality"] = (df["quality"] >= 6).astype(int) 
 X = df.drop("quality", axis=1) 
 y = df["quality"] 
